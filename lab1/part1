@@ -1,0 +1,21 @@
+
+CREATE DATABASE College;
+USE College;
+
+CREATE TABLE Student (
+    Roll_No INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Marks INT,
+    Grade VARCHAR(10),
+    City VARCHAR(50)
+);
+
+INSERT INTO Student (Roll_No, Name, Marks, Grade, City) VALUES
+(1, 'Karun', 50, 'C', 'Bangalore'),
+(2, 'Arjun', 87, 'B', 'Delhi'),
+(3, 'Dayan', 89, 'A', 'Mumbai'),
+(4, 'Priya', 96, 'A+', 'Delhi'),
+(5, 'Kirti', 78, 'B', 'Tirupati'),
+(6, 'Ritvik', 96, 'A+', 'Thiruvananthapuram');
+
+SELECT * FROM Student;
