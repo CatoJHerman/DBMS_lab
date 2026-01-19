@@ -1,0 +1,45 @@
+SET sql_safe_updates = 0;
+
+CREATE DATABASE COMPANY5;
+USE COMPANY5;
+
+CREATE TABLE employee(
+    emp_no INT PRIMARY KEY, 
+    emp_name VARCHAR(50), 
+    emp_address VARCHAR(100)
+);
+
+INSERT INTO employee(emp_no, emp_name, emp_address) VALUES (1001, "Suresh", "Manipal");
+INSERT INTO employee(emp_no, emp_name, emp_address) VALUES (1002, "Dinesh", "Mangalore");
+INSERT INTO employee(emp_no, emp_name, emp_address) VALUES (1003, "Ramesh", "Manipal");
+INSERT INTO employee(emp_no, emp_name, emp_address) VALUES (1004, "Divya", "1st street,manav nagar");
+INSERT INTO employee(emp_no, emp_name, emp_address) VALUES (1005, "Ramya", "ABC");
+
+
+SELECT emp_name FROM employee;
+
+SELECT * FROM employee WHERE emp_address="Manipal";
+
+
+ALTER TABLE employee ADD(emp_salary INT);
+
+
+UPDATE employee SET emp_salary=65000 WHERE emp_no=1001;
+UPDATE employee SET emp_salary=70000 WHERE emp_no=1002;
+UPDATE employee SET emp_salary=65000 WHERE emp_no=1003;
+UPDATE employee SET emp_salary=65000 WHERE emp_no=1004;
+UPDATE employee SET emp_salary=70000 WHERE emp_no=1005;
+
+
+SELECT * FROM employee;
+
+
+DELETE FROM employee WHERE emp_address="Mangalore";
+
+SELECT * FROM employee;
+
+
+RENAME TABLE employee TO employee1;
+
+
+DROP TABLE employee1;
